@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - Wellnest
+name: Build and deploy Node.js app to Azure Web App - wellnest
 
 on:
   push:
@@ -60,15 +60,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_A44F95EFBC634E049FBE00F432870211 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_1C1A69A7B6EF414D8346F890770044EA }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_599C9D7743784CCE904FB00D197ABC30 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_3188A433014640DD9A61A57EA8D4F10E }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_A0F0F59A112A4F3284C14011557FF083 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_1830D30A7592442D8186F61BD54781DB }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'Wellnest'
+          app-name: 'wellnest'
           slot-name: 'Production'
           package: .
           
